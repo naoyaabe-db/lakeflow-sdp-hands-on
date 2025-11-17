@@ -7,7 +7,7 @@
 # schema_name = spark.conf.get("schema_name")
 
 # # バックフィルデータを格納したパスをパラメータから取得
-# backfill_dir_list = eval(spark.conf.get("backfill_dir"))
+# backfill_dir = spark.conf.get("backfill_dir")
 
 # def setup_subscriber_backfill_flow(backfill_dir):
 #     # 加入者マスターのChange Data Feed (CDF)を読み込んで一時的なビューにする
@@ -34,5 +34,4 @@
 #     )
 
 # # パラメータに設定されているバックフィルデータのディレクトリの分だけ、フローを作成する
-# for backfill_dir in backfill_dir_list:
-#     setup_subscriber_backfill_flow(backfill_dir)
+# setup_subscriber_backfill_flow(backfill_dir)
